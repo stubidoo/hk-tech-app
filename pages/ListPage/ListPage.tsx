@@ -1,9 +1,19 @@
 import React from "react"
+import ListItem from "@/components/ListItem"
+import { IBook, ListPageProps } from "types"
 
-function ListPage() {
+function ListPage({ bookList }: ListPageProps) {
   return (
     <div data-testid="list-page">
-      <h3></h3>
+      {bookList.map((book: IBook) => (
+        <ListItem
+          bookTitle={book.title}
+          authorName={book.author}
+          coverImage={book.cover}
+          moreInfo={book.id}
+          key={book.id}
+        />
+      ))}
     </div>
   )
 }

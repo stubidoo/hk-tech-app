@@ -22,6 +22,7 @@ A good solution will satisfy the acceptance criteria work on common web browsers
 ## Todo
 
 - Test coverage
+- add package to type ids,dates, etc
 
 # Next.js + Jest
 
