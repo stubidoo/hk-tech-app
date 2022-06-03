@@ -1,2 +1,2 @@
-export * from "./ListPage"
-export { default } from "./ListPage"
+import ListPage from "./ListPage"
+export default ListPage

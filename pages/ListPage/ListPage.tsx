@@ -1,21 +1,17 @@
-import React from "react"
-import ListItem from "@/components/ListItem"
-import { IBook, ListPageProps } from "types"
+import React, { useEffect, useState } from "react"
+import BookList from "@/components/BookList"
+import useSWR from "swr"
+import { fetchBooks } from "@/lib/utils/utils"
 
-function ListPage({ bookList }: ListPageProps) {
-  return (
-    <div data-testid="list-page">
-      {bookList.map((book: IBook) => (
-        <ListItem
-          bookTitle={book.title}
-          authorName={book.author}
-          coverImage={book.cover}
-          moreInfo={book.id}
-          key={book.id}
-        />
-      ))}
-    </div>
-  )
+const PAGE = "http://localhost:3000"
+
+function ListPage() {
+  const { data, error } = useSWR(PAGE, fetchBooks)
+
+  if (error) return <div>failed to load</div>
+  if (!data) return <div>loading...</div>
+
+  return <BookList bookList={data.books} />
 }
 
 export default ListPage

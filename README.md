@@ -19,33 +19,10 @@ A list of book titles by the same Author (with links)
 
 A good solution will satisfy the acceptance criteria work on common web browsers have good test coverage have a functional user experience and design use appropriate front end libraries be production ready
 
-## Todo
+## Scripts
 
-- Test coverage
-- add package to type ids,dates, etc
-
-# Next.js + Jest
-
-This example shows how to configure Jest to work with Next.js.
-
-This includes Next.js' built-in support for Global CSS, CSS Modules and TypeScript.
-
-## How to Use
-
-Quickly get started using [Create Next App](https://github.com/vercel/next.js/tree/canary/packages/create-next-app#readme)!
-
-In your terminal, run the following command:
-
-```bash
-npx create-next-app --example with-jest with-jest-app
-# or
-yarn create next-app --example with-jest with-jest-app
-# or
-pnpm create next-app -- --example with-jest with-jest-app
-```
-
-## Run Jest Tests
-
-```bash
-npm test
-```
+- Run dev: `yarn dev`
+- Unit test: `yarn test`
+- E2E test: `yarn cypress`
+- Build: `yarn build`
+- Start: `ysrn start`

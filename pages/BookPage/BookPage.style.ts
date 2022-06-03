@@ -1,11 +1,16 @@
 import styled from "styled-components"
 
 export const Container = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+`
+
+export const Book = styled.div`
   display: grid;
   grid-template-columns: 75% 25%;
-  grid-template-rows: 30px auto auto;
   background-color: #b5b5b5;
-  width: 600px;
+  width: 700px;
   margin-bottom: 30px;
   padding: 10px;
   a {

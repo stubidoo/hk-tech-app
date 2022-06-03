@@ -37,7 +37,9 @@ describe("ListItem component", () => {
       const coverImageEl: HTMLImageElement = screen.getByTestId("cover-image")
       expect(coverImageEl).toBeInTheDocument()
       expect(coverImageEl.tagName).toBe("IMG")
-      expect(coverImageEl.src).toBe("http://localhost/some-image-path.jpg")
+      expect(coverImageEl.src).toBe(
+        "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+      )
     })
 
     it("should more info button", () => {
