@@ -23,3 +23,5 @@ export const ImageWrapper = styled.div`
   grid-row: 1 / 4;
   grid-column: 2 / 3;
 `
+
+export default Container

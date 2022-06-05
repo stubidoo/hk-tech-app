@@ -3,10 +3,10 @@ import useSWR from "swr"
 import { IBook, IRelatedBook } from "types"
 import { fetchBooks, findRelatedBooks } from "@/lib/utils/utils"
 
-const PAGE = "http://localhost:3000/BookPage"
+const PAGE = "http://localhost:3000"
 export function useFetchBook(id: string) {
   const { data, error } = useSWR(PAGE, fetchBooks)
-  const [book, setBook] = useState<IBook | null>()
+  const [book, setBook] = useState<IBook | null>(null)
   const [relatedBooks, setRelatedBooks] = useState<IRelatedBook[] | null>()
 
   useEffect(() => {
